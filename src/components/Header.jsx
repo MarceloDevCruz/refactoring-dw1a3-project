@@ -2,6 +2,12 @@
 import './Header.css'
 import { FaBars } from "react-icons/fa";
 
+//hook
+import { useState } from 'react'
+
+// router dom
+import { NavLink } from 'react-router-dom'
+
 
 const Header = () => {
 
@@ -9,17 +15,18 @@ const Header = () => {
     <div>
       <header className="header">
         <nav>
-          <h1>Header</h1>
+          <NavLink to="/"><h1>Header</h1></NavLink>
           <ul className="links">
-            <li> Apartamentos </li>
-            <li> Anuncie </li>
-            <li> Cadastrar </li>
-            <li> Fazer Login </li>
+            <li><NavLink to="/apartamentos"> Apartamentos</NavLink> </li>
+            <li> <NavLink to="/anuncie"> Anuncie </NavLink></li>
+            <li><NavLink to="/register"> Cadastrar</NavLink> </li>
+            <li><NavLink to="/login"> Fazer Login</NavLink> </li>
+            <li> <NavLink to="/sobre">Sobre </NavLink></li>
           </ul>
           <span className="display-menu"><FaBars className="menu" /></span>
         </nav>
       </header>
-    </div>
+    </div >
   )
 }
 
