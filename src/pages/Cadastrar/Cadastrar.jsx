@@ -3,6 +3,7 @@ import './Cadastrar.css'
 
 // hooks
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Cadastrar = () => {
 
@@ -12,6 +13,8 @@ const Cadastrar = () => {
   const [confirmPassword, setConfirmPassword] = useState('')
   const [fone, setFone] = useState('')
   const [error, setError] = useState('')
+
+  const navigate = useNavigate('')
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -61,8 +64,8 @@ const Cadastrar = () => {
     })
 
     localStorage.setItem('user', JSON.stringify(user))
-    console.log(user)
 
+    navigate('/login')
   }
 
   useEffect(() => {
