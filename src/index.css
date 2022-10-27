@@ -32,12 +32,70 @@ button {
   border: none;
 }
 
+h1 {
+  font-weight: 400;
+  font-size: 2.5rem;
+}
+
+input {
+  border: 0.1rem solid #000100;
+  margin: 0.5rem 0;
+  padding: 0.8rem 1rem;
+  width: 40rem;
+  border-radius: 0.5rem;
+}
+
+input::placeholder {
+  color: #080807;
+  font-size: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+input:focus {
+  border: none;
+}
+
+span {
+  font-size: 1.5rem;
+}
+
 .main-container {
   min-height: 60vh;
-  background-color: #e9e9e9;
+  background-color: #E9E9E9;
   background-image: url('./img/background-main-content.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  padding: 5rem;
+}
+
+::-webkit-scrollbar {
+  width: 0.55rem;
+  background-color: #000100;
+  border: 0.5rem solid #080807;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #FEDFDF;
+  border-radius: 2rem;
+  border: 0.2rem solid #CC7E4B;
+}
+
+@media (max-width: 425px) and (min-width: 376px) {
+  input {
+    width: 30rem;
+  }
+}
+
+@media (max-width: 375px) and (min-width: 320px) {
+  input {
+    width: 25rem;
+  }
+}
+
+@media (max-width: 319px) {
+  input {
+    width: 22rem;
+  }
 }
