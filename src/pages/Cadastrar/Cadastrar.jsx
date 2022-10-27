@@ -18,10 +18,38 @@ const Cadastrar = () => {
 
     setError('')
 
-    if (password !== confirmPassword) {
-      setError('A senha precisa ser igual')
+    if (email.indexOf('@') === -1 || email.indexOf('.com') === -1) {
+      setError('Digite um email válido')
       return
     }
+
+    /* console.log(!email.indexOf('@') !== -1 && email.indexOf('.com') !== -1) */
+
+    if (fone.length !== 11) {
+      setError('O contato deve ter pelo menos 11 números (00) 00000-0000 ')
+      return
+    }
+
+    if (!Number(fone)) {
+      setError('O contato deve ter apenas números!')
+      return
+    }
+
+    if (password.length < 8) {
+      setError('A senha precisa ter no mínimo 8 caracteres')
+      return
+    }
+
+    if (password !== confirmPassword) {
+      setError('A senha deve ser iguais')
+      return
+    }
+
+    if (name.length < 3) {
+      setError('Nome deve ter pelo menos 3 caracteres')
+      return
+    }
+
 
     const user = JSON.parse(localStorage.getItem('user') || '[]')
 
