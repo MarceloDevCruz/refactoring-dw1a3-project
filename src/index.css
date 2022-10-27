@@ -70,6 +70,20 @@ span {
   padding: 5rem;
 }
 
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 1.4rem;
+  background-color: #fa3d3d;
+  color: white;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 0.1rem solid #FF0000;
+}
+
 ::-webkit-scrollbar {
   width: 0.55rem;
   background-color: #000100;
