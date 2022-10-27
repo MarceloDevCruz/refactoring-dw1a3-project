@@ -2,7 +2,7 @@ import './App.css';
 
 
 // router dom
-import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 //Components
 import Header from './components/Header.jsx'

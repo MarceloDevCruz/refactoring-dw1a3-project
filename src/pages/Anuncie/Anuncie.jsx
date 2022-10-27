@@ -2,7 +2,7 @@ import './Anuncie.css'
 
 const Anuncie = () => {
   return (
-    <div className="register">
+    <div className="anuncio">
       <h1>Anuncie</h1>
       <p>Faça o anuncio de seu imóvel, colocando as informações referentes ao seu imóvel...</p>
       <form className="form">
